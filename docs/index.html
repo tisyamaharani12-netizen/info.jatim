@@ -3,52 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senandung Timur:Eksplorasi Wisata Jawa Timur</title>
+    <title>Senandung Timur: Eksplorasi Wisata Jawa Timur</title>
     <style>
         body { 
             font-family: 'Segoe UI', Optima, Cambria; 
             margin: 0; 
-            padding: 10px; 
-            background: linear-gradient(135deg,#FFB6C1, #f5576c); /* Gradien pink ke merah untuk tampilan menarik */
+            padding: 40px; /* Diperbesar dari 30px */
+            background: linear-gradient(135deg, #FFB6C1, #f5576c); 
             color: #333; 
         }
         header { 
             text-align: center; 
-            padding: 20px; 
+            padding: 30px; /* Diperbesar dari 20px */
             background: rgba(255, 255, 255, 0.9); 
-            border-radius: 10px; 
-            margin-bottom: 30px; 
+            border-radius: 15px; /* Diperbesar dari 10px */
+            margin-bottom: 40px; /* Diperbesar dari 30px */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
         }
         .header-content { 
             display: flex; 
+            flex-direction: column; /* Diubah untuk menumpuk judul dan keterangan */
             align-items: center; 
             justify-content: center; 
         }
         .logo { 
-            width: 50px; 
-            height: 50px; 
+            width: 60px; /* Diperbesar dari 50px */
+            height: 60px; /* Diperbesar dari 50px */
             margin-right: 15px; 
             border-radius: 5px; 
         }
         h1 { 
-            color: #e84393; /* Warna pink gelap untuk judul */
+            color: #e84393; 
+            margin: 0 0 10px 0; /* Tambah margin bawah untuk spasi */
+            font-size: 3em; /* Diperbesar dari 2.5em */
+        }
+        .header-description { 
+            font-size: 1.2em; /* Ukuran font untuk keterangan */
+            color: #555; 
             margin: 0; 
-            font-size: 2.5em; 
+            max-width: 600px; 
+            line-height: 1.5; 
         }
         .intro-provinsi { 
-            max-width: 1000px; 
-            margin: 20px auto; 
-            padding: 20px; 
+            max-width: 900px; /* Diperbesar dari 800px */
+            margin: 30px auto; /* Diperbesar dari 20px */
+            padding: 30px; /* Diperbesar dari 20px */
             background: rgba(255, 255, 255, 0.9); 
-            border-radius: 15px; 
+            border-radius: 20px; /* Diperbesar dari 15px */
             box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
             text-align: left; 
         }
         .intro-provinsi h2 { 
             color: #e84393; 
-            font-size: 1.8em; 
-            margin-bottom: 15px; 
+            font-size: 2em; /* Diperbesar dari 1.8em */
+            margin-bottom: 20px; /* Diperbesar dari 15px */
         }
         .intro-provinsi p { 
             line-height: 1.6; 
@@ -56,15 +64,15 @@
         }
         .container { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 20px; 
-            max-width: 1500px; 
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Diperbesar minmax dari 300px */
+            gap: 30px; /* Diperbesar dari 20px */
+            max-width: 1400px; /* Diperbesar dari 1200px */
             margin: 0 auto; 
         }
         .daerah { 
             background: white; 
-            padding: 25px; 
-            border-radius: 15px; 
+            padding: 30px; /* Diperbesar dari 20px */
+            border-radius: 20px; /* Diperbesar dari 15px */
             box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
             transition: transform 0.3s ease, box-shadow 0.3s ease; 
             overflow: hidden; 
@@ -76,14 +84,14 @@
         .daerah h2 { 
             color: #e84393; 
             margin-top: 0; 
-            font-size: 1.5em; 
+            font-size: 1.8em; /* Diperbesar dari 1.5em */
         }
         .daerah img { 
             width: 100%; 
-            height: 200px; 
+            height: 250px; /* Diperbesar dari 200px */
             object-fit: cover; 
-            border-radius: 10px; 
-            margin-bottom: 15px; 
+            border-radius: 15px; /* Diperbesar dari 10px */
+            margin-bottom: 20px; /* Diperbesar dari 15px */
         }
         .daerah p { 
             line-height: 1.6; 
@@ -93,10 +101,10 @@
             background: #e84393; 
             color: white; 
             border: none; 
-            padding: 10px 15px; 
-            border-radius: 5px; 
+            padding: 12px 18px; /* Diperbesar dari 10px 15px */
+            border-radius: 8px; /* Diperbesar dari 5px */
             cursor: pointer; 
-            font-size: 1em; 
+            font-size: 1.1em; /* Diperbesar dari 1em */
             transition: background 0.3s; 
         }
         .detail-btn:hover { 
@@ -104,26 +112,26 @@
         }
         .detail { 
             display: none; 
-            margin-top: 15px; 
-            padding: 15px; 
+            margin-top: 20px; /* Diperbesar dari 15px */
+            padding: 20px; /* Diperbesar dari 15px */
             background: #f9f9f9; 
-            border-radius: 10px; 
+            border-radius: 15px; /* Diperbesar dari 10px */
             border-left: 5px solid #e84393; 
         }
         .detail h3 { 
             color: #2c3e50; 
-            margin-bottom: 10px; 
+            margin-bottom: 15px; /* Diperbesar dari 10px */
         }
         .detail ul { 
             margin: 0; 
-            padding-left: 20px; 
+            padding-left: 25px; /* Diperbesar dari 20px */
         }
         footer { 
             text-align: center; 
-            margin-top: 40px; 
-            padding: 20px; 
+            margin-top: 50px; /* Diperbesar dari 40px */
+            padding: 30px; /* Diperbesar dari 20px */
             background: rgba(255, 255, 255, 0.9); 
-            border-radius: 10px; 
+            border-radius: 15px; /* Diperbesar dari 10px */
             color: #7f8c8d; 
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
         }
@@ -142,8 +150,8 @@
 <body>
     <header>
         <div class="header-content">
-            <h1> Senandung Timur:Eksplorasi Jawa Timur</h1>
-
+            <h1>Eksplorasi Jawa Timur</h1>
+            <p class="header-description">Jelajahi keindahan, kuliner, dan budaya dari berbagai daerah di Jawa Timur. Dari pantai hingga gunung, temukan pesona Timur yang tak terlupakan!</p
         </div>
     </header>
 
