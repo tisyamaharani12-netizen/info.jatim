@@ -9,7 +9,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
             margin: 0; 
             padding: 20px; 
-            background: linear-gradient(135deg, #74b9ff, #0984e3); 
+            background: linear-gradient(135deg, #f093fb, #f5576c); /* Gradien pink ke merah untuk tampilan menarik */
             color: #333; 
         }
         header { 
@@ -20,14 +20,39 @@
             margin-bottom: 20px; 
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
         }
+        .header-content { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+        }
+        .logo { 
+            width: 50px; 
+            height: 50px; 
+            margin-right: 15px; 
+            border-radius: 5px; 
+        }
         h1 { 
-            color: #2c3e50; 
+            color: #e84393; /* Warna pink gelap untuk judul */
             margin: 0; 
             font-size: 2.5em; 
         }
-        .intro { 
-            font-size: 1.2em; 
-            margin-top: 10px; 
+        .intro-provinsi { 
+            max-width: 800px; 
+            margin: 20px auto; 
+            padding: 20px; 
+            background: rgba(255, 255, 255, 0.9); 
+            border-radius: 15px; 
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15); 
+            text-align: left; 
+        }
+        .intro-provinsi h2 { 
+            color: #e84393; 
+            font-size: 1.8em; 
+            margin-bottom: 15px; 
+        }
+        .intro-provinsi p { 
+            line-height: 1.6; 
+            color: #555; 
         }
         .container { 
             display: grid; 
@@ -49,7 +74,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
         }
         .daerah h2 { 
-            color: #e74c3c; 
+            color: #e84393; 
             margin-top: 0; 
             font-size: 1.5em; 
         }
@@ -65,7 +90,7 @@
             color: #555; 
         }
         .detail-btn { 
-            background: #3498db; 
+            background: #e84393; 
             color: white; 
             border: none; 
             padding: 10px 15px; 
@@ -75,7 +100,7 @@
             transition: background 0.3s; 
         }
         .detail-btn:hover { 
-            background: #2980b9; 
+            background: #c44569; 
         }
         .detail { 
             display: none; 
@@ -83,7 +108,7 @@
             padding: 15px; 
             background: #f9f9f9; 
             border-radius: 10px; 
-            border-left: 5px solid #e74c3c; 
+            border-left: 5px solid #e84393; 
         }
         .detail h3 { 
             color: #2c3e50; 
@@ -116,14 +141,23 @@
 </head>
 <body>
     <header>
-        <h1>Daerah Khas Jawa Timur</h1>
-        <p class="intro">Jawa Timur memiliki banyak destinasi wisata dan budaya unik. Klik "Lihat Detail" untuk mengetahui lebih lanjut tentang makanan khas, kesenian, dan destinasi wisata di setiap daerah.</p>
+        <div class="header-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Coat_of_arms_of_East_Java.svg/200px-Coat_of_arms_of_East_Java.svg.png" alt="Logo Jawa Timur" class="logo">
+            <h1>Daerah Khas Jawa Timur</h1>
+        </div>
     </header>
+
+    <div class="intro-provinsi">
+        <h2>Apa itu Provinsi Jawa Timur?</h2>
+        <p>Jawa Timur adalah salah satu provinsi terbesar di Indonesia, terletak di bagian timur Pulau Jawa. Provinsi ini memiliki luas wilayah sekitar 47.800 km² dan populasi lebih dari 40 juta jiwa. Jawa Timur dikenal dengan keberagaman budaya, sejarah yang kaya, dan destinasi wisata alam yang spektakuler.</p>
+        <p>Provinsi ini berbatasan dengan Laut Jawa di utara, Samudra Hindia di selatan, serta provinsi Jawa Tengah dan Daerah Istimewa Yogyakarta di barat. Kota-kota besar seperti Surabaya (ibu kota provinsi), Malang, dan Kediri menjadi pusat ekonomi dan budaya. Jawa Timur juga terkenal dengan kuliner khas seperti rawon, sate Madura, dan soto Lamongan, serta kesenian tradisional seperti reog Ponorogo dan karapan sapi Madura.</p>
+        <p>Destinasi wisata utama meliputi gunung-gunung seperti Bromo dan Semeru, pantai-pantai indah di selatan, serta situs sejarah seperti candi-candi Majapahit. Jawa Timur juga memiliki pulau Madura yang terhubung dengan jembatan Suramadu. Klik bagian di bawah untuk menjelajahi daerah-daerah khasnya!</p>
+    </div>
 
     <div class="container">
         <div class="daerah">
             <h2>Surabaya</h2>
-            <img src="https://images.unsplash.com/photo-1582515073490-39981397c445?w=400&h=200&fit=crop" alt="Surabaya">
+            <img src="https://images.unsplash.com/photo-1582515073490-39981397c445?w=400&h=200&fit=crop" alt="Surabaya - Tugu Pahlawan">
             <p>Kota terbesar di Jawa Timur, dikenal dengan Monumen Tugu Pahlawan, Jembatan Suramadu, dan kuliner seperti rawon.</p>
             <button class="detail-btn" onclick="toggleDetail('surabaya')">Lihat Detail</button>
             <div id="surabaya" class="detail">
@@ -150,7 +184,7 @@
 
         <div class="daerah">
             <h2>Malang</h2>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Malang">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Malang - Kebun Apel">
             <p>Kota dingin dengan kebun apel, Gunung Bromo, dan wisata sejarah seperti Museum Angkut.</p>
             <button class="detail-btn" onclick="toggleDetail('malang')">Lihat Detail</button>
             <div id="malang" class="detail">
@@ -176,62 +210,8 @@
         </div>
 
         <div class="daerah">
-            <h2>Gunung Bromo</h2>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Gunung Bromo">
-            <p>Gunung berapi aktif dengan lautan pasir, sunrise spektakuler, dan budaya Tengger.</p>
-            <button class="detail-btn" onclick="toggleDetail('bromo')">Lihat Detail</button>
-            <div id="bromo" class="detail">
-                <h3>Makanan Khas</h3>
-                <ul>
-                    <li>Sate Ayam Bromo</li>
-                    <li>Jagung Bakar</li>
-                    <li>Teh Herbal Tengger</li>
-                </ul>
-                <h3>Kesenian Daerah</h3>
-                <ul>
-                    <li>Tari Tengger</li>
-                    <li>Musik Angklung</li>
-                    <li>Upacara Yadnya Kasada</li>
-                </ul>
-                <h3>Destinasi Wisata</h3>
-                <ul>
-                    <li>Lautan Pasir Bromo</li>
-                    <li>Gunung Semeru</li>
-                    <li>Desa Ngadisari</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="daerah">
-            <h2>Pantai Selatan</h2>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Pantai Selatan">
-            <p>Rangkaian pantai indah seperti Sukamade, Prigi, dan Plengkung, cocok untuk surfing dan snorkeling.</p>
-            <button class="detail-btn" onclick="toggleDetail('pantai')">Lihat Detail</button>
-            <div id="pantai" class="detail">
-                <h3>Makanan Khas</h3>
-                <ul>
-                    <li>Ikan Bakar</li>
-                    <li>Sate Laut</li>
-                    <li>Kelapa Muda</li>
-                </ul>
-                <h3>Kesenian Daerah</h3>
-                <ul>
-                    <li>Tari Kecak</li>
-                    <li>Musik Sasando</li>
-                    <li>Festival Pantai</li>
-                </ul>
-                <h3>Destinasi Wisata</h3>
-                <ul>
-                    <li>Pantai Sukamade</li>
-                    <li>Pantai Prigi</li>
-                    <li>Pantai Plengkung</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="daerah">
             <h2>Madura</h2>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Madura">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Madura - Karapan Sapi">
             <p>Pulau dengan budaya karapan sapi, keris, dan wisata seperti Pantai Sembilan di Sumenep.</p>
             <button class="detail-btn" onclick="toggleDetail('madura')">Lihat Detail</button>
             <div id="madura" class="detail">
@@ -258,7 +238,7 @@
 
         <div class="daerah">
             <h2>Kediri</h2>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Kediri">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Kediri - Candi Penataran">
             <p>Kota sejarah dengan candi-candi seperti Candi Penataran dan wisata kuliner seperti tahu takwa.</p>
             <button class="detail-btn" onclick="toggleDetail('kediri')">Lihat Detail</button>
             <div id="kediri" class="detail">
@@ -285,7 +265,7 @@
 
         <div class="daerah">
             <h2>Blitar</h2>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Blitar">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Blitar - Makam Bung Karno">
             <p>Tempat lahir Bung Karno, dengan makamnya dan wisata alam seperti Gunung Kelud.</p>
             <button class="detail-btn" onclick="toggleDetail('blitar')">Lihat Detail</button>
             <div id="blitar" class="detail">
@@ -312,7 +292,7 @@
 
         <div class="daerah">
             <h2>Tulungagung</h2>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Tulungagung">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Tulungagung - Air Terjun Ngrowo">
             <p>Dikenal dengan Ngrowo, tempat wisata air terjun dan budaya Jawa.</p>
             <button class="detail-btn" onclick="toggleDetail('tulungagung')">Lihat Detail</button>
             <div id="tulungagung" class="detail">
@@ -339,7 +319,7 @@
 
         <div class="daerah">
             <h2>Trenggalek</h2>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Trenggalek">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Trenggalek - Pantai Prigi">
             <p>Surga pantai seperti Prigi dan Munjungan, dengan ombak besar untuk surfing.</p>
             <button class="detail-btn" onclick="toggleDetail('trenggalek')">Lihat Detail</button>
             <div id="trenggalek" class="detail">
@@ -366,23 +346,5 @@
 
         <div class="daerah">
             <h2>Tuban</h2>
-            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Tuban">
-            <p>Wisata religi dengan Makam Sunan Bonang dan pantai seperti Pantai Boom.</p>
-            <button class="detail-btn" onclick="toggleDetail('tuban')">Lihat Detail</button>
-            <div id="tuban" class="detail">
-                <h3>Makanan Khas</h3>
-                <ul>
-                    <li>Soto Tuban</li>
-                    <li>Bakso Tuban</li>
-                    <li>Pisang Goreng</li>
-                </ul>
-                <h3>Kesenian Daerah</h3>
-                <ul>
-                    <li>Tari Sunan Bonang</li>
-                    <li>Wayang Kulit Tuban</li>
-                    <li>Musik Gambus</li>
-                </ul>
-                <h3>Destinasi Wisata</h3>
-                <ul>
-                    <li>Makam Sunan Bonang</li>
-                    <li
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=200&fit=crop" alt="Tuban - Makam Sunan Bonang">
+            <p>Wisata religi dengan Makam Sunan Bonang
